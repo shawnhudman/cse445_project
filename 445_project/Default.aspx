@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Home Page - " Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="_445_project._Default" %>
+﻿<%@ Page Title="Home Page - " Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="_445_project._Default" ValidateRequest="false" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <main>
@@ -156,6 +156,73 @@
                             CssClass="ml-2" />
                     </td>
                   </tr>
+
+                  <tr>
+                      <td>Stephaan Dahdal</td>
+                      <td>WCF Web Service</td>
+                      <td>Web Download</td>
+                      <td>string url</td>
+                      <td>string fullWebData</td>
+                      <td>Given a valid URL (must begin with https://), return a string of the entire web page's contents.</td>
+                      <td>
+                          <asp:TextBox
+                              ID="url_tb"
+                              runat="server"
+                              Placeholder="Enter URL" />
+                          <asp:Button ID="getContents_bt" runat="server" Text="Get Contents"
+                              CssClass="btn btn-primary btn-md" OnClick="getContents_bt_Click" />
+                          <asp:TextBox
+                              ID="fullWebData_tb"
+                              runat="server"
+                              Placeholder="Pastable Contents Here" Width="80%"
+                              TextMode="MultiLine" Rows="1" Columns="5"/>
+                      </td>
+                   </tr>
+
+                   <tr>
+                      <td>Stephaan Dahdal</td>
+                      <td>RESTful Service</td>
+                      <td>Word Occurences</td>
+                      <td>string text</td>
+                      <td>string json</td>
+                      <td>Given text, return appeared words and their frequency pairs in JSON format.</td>
+                      <td>
+                          <asp:TextBox
+                              ID="occurencesInput_tb"
+                              runat="server"
+                              Placeholder="Enter Text"/>
+                          <asp:Button ID="getJson_bt" runat="server" Text="Get JSON"
+                              CssClass="btn btn-primary btn-md" OnClick="getJson_bt_Click" />
+                          <asp:TextBox
+                              ID="json_tb"
+                              runat="server"
+                              Placeholder="Pastable Contents Here" Width="80%"
+                              TextMode="MultiLine" Rows="1" Columns="5"/>
+                      </td>
+                   </tr>
+
+                   <tr>
+                      <td>Stephaan Dahdal</td>
+                      <td>WCF Web Service</td>
+                      <td>FilterWords</td>
+                      <td>string text</td>
+                      <td>string filteredText</td>
+                      <td>Filters out filler/insignificant words such as “a”, “an”, “in”, “on”, “the”, “is”, etc.</td>
+                      <td>
+                          <asp:TextBox
+                              ID="unfilteredText_tb"
+                              runat="server"
+                              Placeholder="Enter Text" />
+                          <asp:Button ID="filter_bt" runat="server" Text="Filter Text"
+                              CssClass="btn btn-primary btn-md" OnClick="filter_bt_Click" />
+                          <asp:TextBox
+                              ID="filteredText_tb"
+                              runat="server"
+                              Placeholder="Pastable Contents Here" Width="80%"
+                              TextMode="MultiLine" Rows="1" Columns="5"/>
+                      </td>
+                   </tr>
+
                 </tbody>
               </table>
             </section>
