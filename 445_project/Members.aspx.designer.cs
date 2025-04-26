@@ -24,6 +24,15 @@ namespace _445_project
         protected global::System.Web.UI.WebControls.TextBox textInput;
 
         /// <summary>
+        /// textJsonCount control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox textJsonCount;
+
+        /// <summary>
         /// findTextBox control.
         /// </summary>
         /// <remarks>
@@ -51,30 +60,66 @@ namespace _445_project
         protected global::System.Web.UI.WebControls.Button btnFindAndReplace;
 
         /// <summary>
-        /// TextBox1 control.
+        /// linkTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        protected global::System.Web.UI.WebControls.TextBox linkTextBox;
 
         /// <summary>
-        /// TextBox2 control.
+        /// btnGetContents control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox2;
+        protected global::System.Web.UI.WebControls.Button btnGetContents;
 
         /// <summary>
-        /// Button1 control.
+        /// lblWordCount control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected global::System.Web.UI.WebControls.Label lblWordCount;
+
+        /// <summary>
+        /// btnWordCount control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnWordCount;
+
+        /// <summary>
+        /// btnFilter control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnFilter;
+
+        /// <summary>
+        /// btnReverse control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnReverse;
+
+        /// <summary>
+        /// btnCountEveryWord control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnCountEveryWord;
     }
 }
