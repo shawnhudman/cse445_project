@@ -13,5 +13,17 @@ namespace _445_project
         {
 
         }
+
+        protected void btnFindAndReplaceClick (object sender, EventArgs e)
+        {
+            var service = new WebService1();
+            string text = textInput.Text;
+            string findWord = findTextBox.Text;
+            string replaceWord = ReplaceTextBox.Text;
+
+            string response = service.FindAndReplace(text, findWord, replaceWord);
+
+            textInput.Text = response;
+        }
     }
 }
