@@ -223,6 +223,58 @@
                       </td>
                    </tr>
 
+					<!-- SHA-256 Hash -->
+					<tr>
+						<td>Colton Hutchins</td>
+						<td>Static Utility</td>
+						<td>SHA-256 Hash</td>
+						<td>string input</td>
+						<td>string hash</td>
+						<td>Returns the SHA-256 hash of the input text.</td>
+						<td>
+							<asp:TextBox ID="hashInput_tb" runat="server"
+                                         Placeholder="Enter text to hash" />
+							<asp:Button  ID="btnHash" runat="server" Text="Hash"
+                                         CssClass="btn btn-primary btn-md" OnClick="btnHash_Click" />
+							<asp:Label   ID="lblHash" runat="server" Text="" CssClass="ml-2" />
+						</td>
+					</tr>
+
+					<!-- Reverse Text -->
+					<tr>
+						<td>Colton Hutchins</td>
+						<td>ASMX Web Service</td>
+						<td>Reverse</td>
+						<td>string input</td>
+						<td>string reversedText</td>
+						<td>Reverses the input text.</td>
+						<td>
+							<asp:TextBox ID="reverseInput_tb" runat="server"
+                                         Placeholder="Enter text to reverse" />
+							<asp:Button  ID="btnReverse" runat="server" Text="Reverse"
+                                         CssClass="btn btn-primary btn-md" OnClick="btnReverse_Click" />
+							<asp:Label   ID="lblReverseResult" runat="server" Text="" CssClass="ml-2" />
+						</td>
+					</tr>
+
+					<!-- Word Count -->
+					<tr>
+						<td>Colton Hutchins</td>
+						<td>Static Utility</td>
+						<td>WordCount</td>
+						<td>string input</td>
+						<td>int count</td>
+						<td>Counts the words in the input text.</td>
+						<td>
+							<asp:TextBox ID="wordCountInput_tb" runat="server"
+                                         Placeholder="Enter text" />
+							<asp:Button  ID="btnWordCount" runat="server" Text="Count"
+                                         CssClass="btn btn-primary btn-md" OnClick="btnWordCount_Click" />
+							<asp:Label   ID="lblWordCount" runat="server" Text="" CssClass="ml-2" />
+						</td>
+					</tr>
+					
+
                 </tbody>
               </table>
             </section>

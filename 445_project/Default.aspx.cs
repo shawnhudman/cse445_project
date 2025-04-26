@@ -6,6 +6,9 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using ProjectUtilities;
 using System.Net.Http;
+using _445_project;
+    //  <<- helpers live here
+
 
 namespace _445_project
 {
@@ -97,5 +100,33 @@ namespace _445_project
             WordFilter.Service1Client prxy = new WordFilter.Service1Client();
             filteredText_tb.Text = (prxy.WordFilter(unfilteredText_tb.Text)).ToString();
         }
+
+        //-------------------------------------------
+        //  NEW HANDLERS
+        //-------------------------------------------
+
+        // SHA-256 Hash
+        protected void btnHash_Click(object sender, EventArgs e)
+        {
+           lblHash.Text = HashUtility.HashString(hashInput_tb.Text ?? string.Empty);
+        }
+
+        // Reverse Text (local ASMX)
+        protected void btnReverse_Click(object sender, EventArgs e)
+        {
+            var svc = new ReverseText();
+           /lblReverseResult.Text = svc.Reverse(reverseInput_tb.Text ?? string.Empty);
+        }
+        
+        // Word Count
+        protected void btnWordCount_Click(object sender, EventArgs e)
+        {
+            int count = TextStats.WordCount(wordCountInput_tb.Text ?? string.Empty);
+            lblWordCount.Text = count.ToString();
+        }
+
+
+
+
     }
 }
