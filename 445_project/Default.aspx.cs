@@ -108,25 +108,21 @@ namespace _445_project
         // SHA-256 Hash
         protected void btnHash_Click(object sender, EventArgs e)
         {
-           lblHash.Text = HashUtility.HashString(hashInput_tb.Text ?? string.Empty);
+           lblHash.Text = Encryption.HashString(hashInput_tb.Text ?? string.Empty);
         }
 
         // Reverse Text (local ASMX)
         protected void btnReverse_Click(object sender, EventArgs e)
         {
             var svc = new ReverseText();
-           /lblReverseResult.Text = svc.Reverse(reverseInput_tb.Text ?? string.Empty);
+            lblReverseResult.Text = svc.Reverse(reverseInput_tb.Text ?? string.Empty);
         }
         
         // Word Count
         protected void btnWordCount_Click(object sender, EventArgs e)
         {
-            int count = TextStats.WordCount(wordCountInput_tb.Text ?? string.Empty);
+            int count = Utilities.WordCount(wordCountInput_tb.Text ?? string.Empty);
             lblWordCount.Text = count.ToString();
         }
-
-
-
-
     }
 }
