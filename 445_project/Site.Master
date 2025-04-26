@@ -48,11 +48,32 @@
                     aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse d-sm-inline-flex justify-content-between">
+                <div class="collapse navbar-collapse d-sm-inline-flex justify-content-between align-items-center">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item"><a class="nav-link" runat="server" href="~/">Home</a></li>
                         <li class="nav-item"><a class="nav-link" runat="server" href="~/Members">Members</a></li>
                         <li class="nav-item"><a class="nav-link" runat="server" href="~/Staff">Staff</a></li>
+                    </ul>
+
+                    <!-- This is for the welcome logged in user message -->
+                    <ul class="navbar-nav">
+                        <asp:LoginView ID="LoginView" runat="server">
+                            <AnonymousTemplate>
+                                <li class="nav-item">
+                                    <a class="nav-link" runat="server" href="~/SignIn">Log In</a>
+                                </li>
+                            </AnonymousTemplate>
+                            <LoggedInTemplate>
+                                <li class="nav-item me-3">
+                                    <a class="nav-link disabled text-light" href="#">
+                                        Welcome <asp:LoginName runat="server" />
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutPageUrl="~/Default.aspx" LogoutText="Log Out" CssClass="nav-link" /> 
+                                </li>
+                            </LoggedInTemplate>
+                        </asp:LoginView>
                     </ul>
                 </div>
             </div>
