@@ -2,7 +2,7 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <main aria-labelledby="title">
-        <h3>Work in Progress, Soon to be member onboarding and login.</h3>
+        <h3>Work in Progress, Soon to be where members can access our services</h3>
         <p>Coming Soon.</p>
     </main>
 </asp:Content>
