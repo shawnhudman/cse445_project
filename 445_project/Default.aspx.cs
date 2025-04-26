@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using ProjectUtilities;
+using System.Net.Http;
 
 namespace _445_project
 {
@@ -69,6 +70,32 @@ namespace _445_project
         protected void btnStaffLogInClick(object sender, EventArgs e)
         {
             Response.Redirect("~/Staff.aspx");
+        }
+
+        protected void getContents_bt_Click(object sender, EventArgs e)
+        {
+            WebDownload.Service1Client prxy = new WebDownload.Service1Client();
+            fullWebData_tb.Text = (prxy.WebDownload(url_tb.Text)).ToString();
+        }
+
+        protected void getJson_bt_Click(object sender, EventArgs e)
+        {
+            string url = "http://localhost:50356/Service1.svc/";
+            string targetUrl = occurencesInput_tb.Text.Trim();
+            Console.WriteLine("Input received: " + targetUrl);
+            url += $"WordCount?file={targetUrl}";
+            var channel = new HttpClient { BaseAddress = new Uri(url) };
+            HttpResponseMessage response = channel.GetAsync("").Result;
+            string xml = response.Content.ReadAsStringAsync().Result;
+            var doc = new System.Xml.XmlDocument();
+            doc.LoadXml(xml);
+            json_tb.Text = doc.InnerText;
+        }
+
+        protected void filter_bt_Click(object sender, EventArgs e)
+        {
+            WordFilter.Service1Client prxy = new WordFilter.Service1Client();
+            filteredText_tb.Text = (prxy.WordFilter(unfilteredText_tb.Text)).ToString();
         }
     }
 }

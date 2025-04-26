@@ -50,6 +50,9 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
@@ -99,6 +102,29 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+
+    <None Include="Connected Services\WebDownload\Service1.disco" />
+    <None Include="Connected Services\WebDownload\configuration91.svcinfo" />
+    <None Include="Connected Services\WebDownload\configuration.svcinfo" />
+    <None Include="Connected Services\WebDownload\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\WordCount\Service1.disco" />
+    <None Include="Connected Services\WordCount\configuration91.svcinfo" />
+    <None Include="Connected Services\WordCount\configuration.svcinfo" />
+    <None Include="Connected Services\WordCount\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Connected Services\WordFilter\Service1.disco" />
+    <None Include="Connected Services\WordFilter\configuration91.svcinfo" />
+    <None Include="Connected Services\WordFilter\configuration.svcinfo" />
+    <None Include="Connected Services\WordFilter\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+
     <Content Include="App_Data\Members.xml" />
     <Content Include="Members.aspx" />
     <Content Include="Staff.aspx" />
@@ -153,6 +179,27 @@
     <Content Include="Register.aspx" />
     <Content Include="SignIn.aspx" />
     <Content Include="WebService1.asmx" />
+    <None Include="Connected Services\WebDownload\Service1.wsdl" />
+    <None Include="Connected Services\WebDownload\Service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\WebDownload\Service11.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\WordCount\Service1.wsdl" />
+    <None Include="Connected Services\WordCount\Service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\WordCount\Service11.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\WordFilter\Service1.wsdl" />
+    <None Include="Connected Services\WordFilter\Service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\WordFilter\Service11.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Scripts\jquery-3.7.0.intellisense.js" />
     <Content Include="Scripts\jquery-3.7.0.js" />
     <Content Include="Scripts\jquery-3.7.0.min.js" />
@@ -188,6 +235,21 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="Connected Services\WebDownload\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\WordCount\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\WordFilter\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Members.aspx.cs">
       <DependentUpon>Members.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -271,6 +333,14 @@
       <Project>{1737e9ad-4601-4da0-ad74-fdbfa257dad5}</Project>
       <Name>ProjectUtilities</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\WebDownload\" />
+    <WCFMetadataStorage Include="Connected Services\WordCount\" />
+    <WCFMetadataStorage Include="Connected Services\WordFilter\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
