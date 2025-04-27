@@ -69,6 +69,16 @@
                         Sign in here.
                     </asp:HyperLink>
                 </p>
+
+                <p class="mt-2">
+                    Staff?
+                    <asp:HyperLink
+                        runat="server"
+                        NavigateUrl="~/StaffSignIn.aspx"
+                        CssClass="ml-1">
+                        Staff sign in here.
+                    </asp:HyperLink>
+                </p>
                     
             </div>
 

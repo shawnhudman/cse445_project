@@ -1,12 +1,12 @@
-﻿<%@ Page Title="Sign In – Text Utilities" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="SignIn.aspx.cs" Inherits="_445_project.SignIn" %>
+﻿<%@ Page Title="Staff Sign In – Text Utilities" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="StaffSignIn.aspx.cs" Inherits="_445_project.StaffSignIn" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <main>
         <!-- header -->
         <section class="row" aria-labelledby="signInTitle">
-            <h1 id="signInTitle">Member Log In</h1>
+            <h1 id="signInTitle">Staff Log In</h1>
             <p class="lead">
-                Welcome back, sign in below.
+                Welcome staff, sign in below.
             </p>
         </section>
 
@@ -47,26 +47,6 @@
                     Text="Log In"
                     OnClick="btnLogInClick"
                     CssClass="btn btn-primary btn-md" />
-
-                <p class="mt-2">
-                    Staff?
-                    <asp:HyperLink
-                        runat="server"
-                        NavigateUrl="~/StaffPages/StaffSignIn.aspx"
-                        CssClass="ml-1">
-                        Staff sign in here.
-                    </asp:HyperLink>
-                </p>
-
-                <p class="mt-2">
-                    Not a member?
-                    <asp:HyperLink
-                        runat="server"
-                        NavigateUrl="~/Register.aspx"
-                        CssClass="ml-1">
-                        Create account here.
-                    </asp:HyperLink>
-                </p>
                     
             </div>
 
