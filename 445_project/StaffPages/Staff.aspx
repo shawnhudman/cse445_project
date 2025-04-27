@@ -73,5 +73,9 @@
                     CssClass="btn btn-primary btn-md" />
             </div>
         </section>
+        <!-- Section for active site users -->
+        <section class="row mb-5 gx-5">
+            <h2 id="titleActiveUsers" runat="server">Current Active Users: </h2>
+        </section>
     </main>
 </asp:Content>

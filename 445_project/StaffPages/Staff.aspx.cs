@@ -30,6 +30,14 @@ namespace _445_project
             {
                 FillMemberGrid();
             }
+
+            int userCount = 0;
+
+            if (Application["UserCount"] != null)
+            {
+                userCount = (int)Application["UserCount"];
+                titleActiveUsers.InnerText = "Current Active Users: " + userCount.ToString();
+            }
         }
 
         private void FillMemberGrid()

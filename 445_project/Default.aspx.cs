@@ -83,7 +83,7 @@ namespace _445_project
 
         protected void getJson_bt_Click(object sender, EventArgs e)
         {
-            string url = "http://localhost:50356/Service1.svc/";
+            string url = "http://webstrar58.fulton.asu.edu/page3/Service1.svc";
             string targetUrl = occurencesInput_tb.Text.Trim();
             Console.WriteLine("Input received: " + targetUrl);
             url += $"WordCount?file={targetUrl}";
