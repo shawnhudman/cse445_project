@@ -72,7 +72,7 @@ namespace _445_project
 
         protected void btnStaffLogInClick(object sender, EventArgs e)
         {
-            Response.Redirect("~/Staff.aspx");
+            Response.Redirect("~/StaffPages/Staff.aspx");
         }
 
         protected void getContents_bt_Click(object sender, EventArgs e)
