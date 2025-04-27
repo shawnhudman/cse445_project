@@ -56,6 +56,11 @@
               <h2 id="servicesTableTitle">Service Directory</h2>
               <table class="table table-bordered">
                 <thead>
+                    <tr class="table-secondary">
+                        <td colspan="7" class="text-center">
+                            <strong>Percentage of overall contribution: Shawn Hudman - 33% | Stephaan Dahdal = 33% | Colton Hutchins - 33%</strong>
+                        </td>
+                    </tr>
                   <tr>
                     <th>Provider</th>
                     <th>Page / Component Type</th>
@@ -155,6 +160,49 @@
                             Text="Result Here:"
                             CssClass="ml-2" />
                     </td>
+                  </tr>
+
+                  <tr>
+                    <td>Shawn Hudman</td>
+                    <td>Web Service</td>
+                    <td>Find and Replace</td>
+                    <td>string text, string findWord, string replaceWord</td>
+                    <td>string returnString</td>
+                    <td>Finds and replaces a given word in the text, then returns the modified text.</td>
+                    <td>
+                        <asp:TextBox
+                            ID="TextBox1"
+                            runat="server"
+                            Placeholder="Enter text here:" />
+                        <asp:TextBox
+                            ID="TextBox2"
+                            runat="server"
+                            Placeholder="Place word to find here:" />
+                        <asp:TextBox
+                            ID="TextBox3"
+                            runat="server"
+                            Placeholder="Word to replace with:" />
+
+                        <asp:Button runat="server"
+                            Text="Find and Replace Web Service"
+                            OnClick="btnCallWebService"
+                            CssClass="btn btn-primary btn-md" />
+                        <asp:Label
+                            ID="Label1"
+                            runat="server"
+                            Text="Result Here:"
+                            CssClass="ml-2" />
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>Shawn Hudman</td>
+                    <td>Authentication</td>
+                    <td>User Authentication</td>
+                    <td>string username, string passwordHash</td>
+                    <td>n/a</td>
+                    <td>Controlled access to pages and implemented the register and sign up flow for members/staff.</td>
+                    <td>n/a</td>
                   </tr>
 
                   <tr>
