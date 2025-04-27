@@ -53,12 +53,14 @@
                         TextMode="Password" />
                 </div>
 
+                <div class="g-recaptcha mb-3" data-sitekey="6LceoyYrAAAAAL_rLoMi_Xh_KymKV7RjKQgGW3wP"></div>
                 <asp:Button
                     ID="btnRegister"
                     runat="server"
                     Text="Create Account"
                     OnClick="btnRegisterClick"
                     CssClass="btn btn-primary btn-md" />
+                <asp:ValidationSummary runat="server" CssClass="text-danger mt-2" />
 
                 <p class="mt-2">
                     Returning?
